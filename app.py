@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, Response, stream_with_context
+from flask import Flask, render_template, request, Response, stream_with_context 
 from google import genai
 from dotenv import load_dotenv
 import os
@@ -49,4 +49,4 @@ def chat_endpoint():
     return Response(stream_with_context(generate()), mimetype="text/event-stream")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
